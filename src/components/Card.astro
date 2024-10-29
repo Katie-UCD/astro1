@@ -1,61 +1,134 @@
----
-interface Props {
-	title: string;
-	body: string;
-	href: string;
+
+<div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+            <div class="card-img-top">
+                 <a href="#"><img src="../img/flash.png" alt="The Flash"/>
+            </div>        
+            <div class="card-body">
+              <h5 class="card-title">The Flash</h5>
+              <p class="card-text">Able to run at near light-speeds, his powers provide the ultimate caffeine kick: He can run up buildings, move so swiftly he phases through objects, create sonic booms with the snap of his fingers.</p>
+            </a>
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+            <div class="card-img-top">
+             <a href="#"> <img src="../img/wonderWoman.png" alt="Wonder Woman">
+            </div>    
+            <div class="card-body">
+              <h5 class="card-title">Wonder Woman</h5>
+              <p class="card-text">Wonder Woman is Princess Diana of the immortal Amazons from Greek mythology. Wonder Woman has superhuman strength and speed, as well as the trademark bulletproof bracelets, but it’s probably her Golden Lasso of Truth most people really wish they had.
+            </p>
+        </a>
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+            <a href="#">
+             <div class="card-img-top">
+            <img src="../img/superman.png"  alt="Superman">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Supeman</h5>
+              <p class="card-text">Superman has super strength, speed, flight, invulnerability as well as his renowned X-ray and heat vision. The most powerful being on the planet, his amazing abilities are also a melancholy reminder of how different he is from the people he’s dedicated to protect.
+            </p>
+        </a>
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+            <a href="#">
+            <div class="card-img-top">
+            <img src="../img/zatana.png" alt="Zatanna">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Zatanna</h5>
+              <p class="card-text">Intelligent, confident, self-assured and able to manipulate reality itself with her vast magical abilities, Zatanna balances her time as a skilled stage illusionist with battling the dark arts alongside some of the world’s greatest super heroes.</p>
+            </a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+	.superheroes {
+    max-width: 50%;
+   padding: 100px;
+   box-sizing: border-box;
+
+
+  
+}
+.superheroName{
+ background-color: var(--blue);
+ color: white;
+text-align: center;
+box-sizing: border-box;
+
+
 }
 
-const { href, title, body } = Astro.props;
----
+.superheroName, img{
+    width: 90%;
+    padding: 10px;
+}
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
-<style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
-</style>
+
+h1{
+    font-weight: 200;
+}
+
+
+footer{
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    font-weight:200;
+    padding: 10px;
+}
+
+ a{
+
+    text-decoration: none;
+    color:black;
+}
+
+.card-img-top {
+    background-color: var(--blue);
+    width: 100%;
+    background-size: auto;
+  
+}
+
+.card-img-top, img{
+    width: auto;
+    height: 500px;
+}
+
+
+
+h1{
+    font-weight: 200;
+    font-size: 1em;
+}
+
+
+
+@media (max-width: 800px) {
+    .superheroes {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    }
+    .rankings{
+        display: block;
+    }
+  }
+
+
+  </style>
