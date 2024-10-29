@@ -1,5 +1,12 @@
 ---
-import headerVar from "./header.png";
+import { imageMetadata } from 'astro/assets/utils';
+import { Image } from 'astro:assets';
+interface Props {
+    imagePath: string;
+    altText: string;
+}
+const {imagePath, altText} = Astro.props;
+const images = import.meta.glob<{ default: imageMetadata }>('src/assets/*.{jpeg,jpg,png}')
 ---
 
 
@@ -14,7 +21,7 @@ import headerVar from "./header.png";
     
     </ul>
     <img src="./header.png" alt="header image"/>
-    <img src={headerVar.src} alt="header image load"/>
+    <Image src={images[imagePath]} alt={altText}/>
 </header>
 
 <style>
