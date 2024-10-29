@@ -1,7 +1,4 @@
----
-import { Image } from 'astro:assets';
 
----
 
 
 <header>
@@ -14,10 +11,7 @@ import { Image } from 'astro:assets';
         <li><a href="/astro1/page6">Page 6</a></li>
     
     </ul>
-   
-
 </header>
-<Image src="./header.png" alt="Header" width="200" height="500" />
 
 <style>
         :root { /*	:root selector matches the documents root element */
@@ -61,7 +55,11 @@ li a:hover:not(.active){
 header{
     width:100%;
     height:400px;
-
+    background-image: url("./header.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
     
 }
 
