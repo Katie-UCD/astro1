@@ -1,5 +1,6 @@
 ---
-import headerVar from "./header.png";
+import { Image } from 'astro:assets';
+import myImage from "./header.png";
 ---
 
 
@@ -13,7 +14,7 @@ import headerVar from "./header.png";
         <li><a href="/astro1/page6">Page 6</a></li>
     
     </ul>
-    <img src="./header.png" alt="header image"/>
+    <img src={myImage} alt="header image"/>
 
 </header>
 
