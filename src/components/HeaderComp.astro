@@ -1,5 +1,5 @@
 ---
-import src from "./header.png";
+import headervar from "../header.png";
 ---
 
 
@@ -13,10 +13,6 @@ import src from "./header.png";
         <li><a href="/astro1/page6">Page 6</a></li>
     
     </ul>
-    <BackgroundImage 
-        src={src}
-        alt = "a local DC image"
-    />
 </header>
 
 <style>
@@ -61,7 +57,7 @@ li a:hover:not(.active){
 header{
     width:100%;
     height:400px;
-    background-image: url("./header.png");
+    background-image: {headerVar};
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
