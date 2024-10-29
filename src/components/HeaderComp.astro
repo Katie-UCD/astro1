@@ -1,14 +1,14 @@
 
 <header>
-    <nav>
-        <a href="http://localhost:4321/">Home</a>
-        <a href="page2">Page 2</a>
-        <a href="page3">Page 3</a>  
-        <a href="page4">Page 4</a>
-        <a href="page5">Page 5</a>  
-        <a href="page6">Page 6</a>
+    <ul>
+        <li><a href="/my-repo/">Home</a></li>
+        <li><a href="/my-repo/page2">Page 2</a></li>
+        <li><a href="/my-repo/page3">Page 3</a></li>
+        <li><a href="/my-repo/page4">Page 4</a></li>
+        <li><a href="/my-repo/page5">Page 5</a></li>
+        <li><a href="/my-repo/page6">Page 6</a></li>
     
-    </nav>
+    </ul>
 </header>
 
 <style>
@@ -16,28 +16,51 @@
     --blue: #00467c;	/* <variable-name>:<variable-value> */
     font-family: Arial, Helvetica, sans-serif;
 }
-nav{
+
+ul{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     background-color: var(--blue);
-    color: white;
-    padding:5px;
-    text-align: center;
 }
-nav a{
-    border-left:1px solid white;
-    width: 100%;
-    padding: 10px 100px;
-    margin: auto;
+
+li{
+    float: left;
+    border-right: 1px solid white;
+}
+
+li:last-child{
+    border-right: none;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    color: white;
-    text-align: center;
 }
+
+li a:hover:not(.active){
+    background-color: #0261aa;
+
+}
+.active{
+    background-color: #0261aa;
+}
+
 header{
     width:100%;
-    height:500px;
-    background-image: url('../img/header.png');
+    height:400px;
+    background-image: url('/my-repo/header.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin-bottom: 10px;
     
 }
+
+
+
 </style>
