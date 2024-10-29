@@ -1,4 +1,6 @@
-
+---
+import headerImg from "../assets/header.png";
+---
 <header>
     <ul>
         <li><a href="/my-repo/">Home</a></li>
@@ -53,7 +55,7 @@ li a:hover:not(.active){
 header{
     width:100%;
     height:400px;
-    background-image: url('/my-repo/header.png');
+    background-image: {headerImg.url};
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
